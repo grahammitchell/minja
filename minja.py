@@ -2,8 +2,7 @@
 
 # 2020-04-01 - Graham Mitchell
 
-import json, logging, os, re, shutil, sys
-from os.path import join
+import json, logging, os, re, sys
 
 def main():
 	logging.getLogger().setLevel(logging.WARNING)
@@ -24,7 +23,7 @@ def minja(input_folder, replacements, prefilter=None):
 	"""replaces all occurrences of replacements in all files, filename and folder names"""
 	for root, dirs, files in os.walk(input_folder, topdown=False):
 		for name in files:
-			change_file_in_place(join(root, name), replacements, prefilter)
+			change_file_in_place(os.path.join(root, name), replacements, prefilter)
 			rename_if_matching(root, name, replacements)
 		for name in dirs:
 			rename_if_matching(root, name, replacements)
