@@ -1,0 +1,1 @@
+Configuration repository for __app_name__
