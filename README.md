@@ -3,6 +3,8 @@
 Kind of like Cookiecutter or Jinja but with 70% fewer features and 90% less code!
 Also barely tested.
 
+Pure Python 3, no external dependencies.
+
 Given a dictionary of "from" -> "to" replacements, and a folder full of files:
 
 - replaces all occurrences in the body of all files
